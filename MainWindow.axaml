@@ -1,0 +1,88 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="CGSSVmdConverter.MainWindow"
+
+    Width="700"
+    Height="380"
+    MinWidth="600"
+    MinHeight="350"
+
+    Icon="/Assets/icon.png"
+    
+    Title="CGSS VMD Converter">
+
+    <Grid Margin="30"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,*"
+          RowSpacing="18">
+
+        <TextBlock
+            Grid.Row="0"
+            Text="CGSS → VMD"
+            FontSize="28"
+            FontWeight="Bold" />
+
+        <TextBlock
+            Grid.Row="1"
+            Text="Convert CGSS Unity Legacy AnimationClip (.anim) motion into MikuMikuDance VMD."
+            TextWrapping="Wrap" />
+
+        <Grid
+            Grid.Row="2"
+            ColumnDefinitions="*,Auto"
+            ColumnSpacing="10">
+
+            <TextBox
+                x:Name="InputPathBox"
+                Grid.Column="0"
+                IsReadOnly="True"
+                Watermark="Select CGSS .anim file..." />
+
+            <Button
+                Grid.Column="1"
+                Content="Browse..."
+                Click="BrowseButton_OnClick" />
+
+        </Grid>
+
+        <Grid
+            Grid.Row="3"
+            ColumnDefinitions="Auto,*"
+            ColumnSpacing="10">
+
+            <TextBlock
+                Grid.Column="0"
+                Text="Output FPS:"
+                VerticalAlignment="Center" />
+
+            <ComboBox
+                x:Name="FpsBox"
+                Grid.Column="1"
+                Width="100"
+                HorizontalAlignment="Left"
+                SelectedIndex="0">
+
+                <ComboBoxItem Content="30" />
+                <ComboBoxItem Content="60" />
+
+            </ComboBox>
+
+        </Grid>
+
+        <Button
+            Grid.Row="4"
+            x:Name="ConvertButton"
+            Content="Convert to VMD"
+            HorizontalAlignment="Left"
+            Padding="24,10"
+            Click="ConvertButton_OnClick" />
+
+        <TextBlock
+            Grid.Row="5"
+            x:Name="StatusText"
+            Text="Select a CGSS .anim file."
+            TextWrapping="Wrap" />
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,36 @@
+# .NET build output
+bin/
+obj/
+
+# NuGet packages
+/packages/
+
+# JetBrains Rider / ReSharper
+.idea/
+*.iml
+_ReSharper.Caches/
+*.DotSettings.user
+
+# Visual Studio / VS Code user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+
+# Published / packaged releases
+publish/
+release/
